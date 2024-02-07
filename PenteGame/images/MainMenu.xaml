@@ -1,0 +1,60 @@
+﻿<Window x:Class="PenteGame.images.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PenteGame.images"
+        mc:Ignorable="d"
+        Title="MainMenu" Height="450" Width="800">
+    <Grid Background="#FF232323">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="169*"/>
+            <ColumnDefinition Width="631*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="QuitButton" Content="Quit" HorizontalAlignment="Left" Margin="142,337,0,0" VerticalAlignment="Top" Height="49" Width="178" Click="Quit_Click" BorderBrush="Black" FontFamily="November" FontSize="25" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFC172"/>
+                    <GradientStop Color="#FFFFAA30" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="ClassicButton" Content="Classic" HorizontalAlignment="Left" Margin="133,254,0,0" VerticalAlignment="Top" Height="49" Width="178" Click="Classic_Click" BorderBrush="Black" FontFamily="November" FontSize="25" Grid.ColumnSpan="2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFC172"/>
+                    <GradientStop Color="#FFFFAC36" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="RandomButton" Content="Random Board (9 - 39)" HorizontalAlignment="Left" Margin="327,254,0,0" VerticalAlignment="Top" Height="49" Width="177" Click="Random_Click" BorderBrush="Black" FontFamily="November" FontSize="15" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FEFFA82B" Offset="1"/>
+                    <GradientStop Color="#FFFFC172" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <TextBlock x:Name="TitleMenu" HorizontalAlignment="Left" Margin="53,63,0,0" TextWrapping="Wrap" Text="PENTE GAME" VerticalAlignment="Top" Height="136" Width="362" FontFamily="November" FontSize="50" TextAlignment="Center" Grid.Column="1">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFBB62"/>
+                    <GradientStop Color="#FFFEA82E" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+
+        <Button x:Name="Instructions" Content="How to Play" HorizontalAlignment="Left" Margin="142,168,0,0" VerticalAlignment="Top" Height="49" Width="178" BorderBrush="Black" FontFamily="November" FontSize="25" Click="Instructions_Click" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFC172"/>
+                    <GradientStop Color="#FFFFAC36" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>
