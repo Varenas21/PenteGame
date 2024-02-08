@@ -26,15 +26,11 @@ namespace PenteGame
         {
             InitializeComponent();
             int count = 1;
-            int gridSize = 0;
-            //if (menu.ClassicButton.IsPressed = true)
-            //{
-            //    gridSize = 19;
-            //}
-            //else if(menu.RandomButton.IsPressed = true)
-            //{
-            //    gridSize = menu.randomGridSize;
-            //}
+            int gridSize = menu.randomGridSize;
+
+            //Testing
+            menu.Show();
+
             // Making grid
             RowDefinition rowDefinition = new RowDefinition();
             ColumnDefinition columnDefinition = new ColumnDefinition();

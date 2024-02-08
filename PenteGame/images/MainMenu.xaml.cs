@@ -20,17 +20,20 @@ namespace PenteGame.images
     /// </summary>
     public partial class MainMenu : Window
     {
+        public MainWindow mainWindow = new MainWindow();
         public int randomGridSize = 0;
         public MainMenu()
         {
             InitializeComponent();
+
         }
 
 
         private void Random_Click(object sender, RoutedEventArgs e)
         {
-            Random randomNum = new Random();
-            randomGridSize = randomNum.Next(9, 39);
+            randomGridSize = int.Parse(UserInput.Text);
+            Console.WriteLine("Grid Size Value: " + randomGridSize);
+        
         }
 
         private void Quit_Click(object sender, RoutedEventArgs e)
@@ -40,12 +43,13 @@ namespace PenteGame.images
 
         private void Classic_Click(object sender, RoutedEventArgs e)
         {
-
+            randomGridSize = 19;
         }
 
         private void Instructions_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("https://www.pente.net/instructions.html");
         }
+
     }
 }
