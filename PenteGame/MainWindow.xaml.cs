@@ -15,7 +15,7 @@ namespace PenteGame
 
     public partial class MainWindow : Window
     {
-        MainMenu menu = new MainMenu();
+      
         bool isPlayer = true;
         int p1CapCount = 0; // Need to initialize values otherwise we get an exception
         int p2CapCount = 0;
@@ -24,12 +24,15 @@ namespace PenteGame
 
         public MainWindow()
         {
+            MainMenu menu = new MainMenu();
+            menu.Show();
             InitializeComponent();
+            Hide();
+
             int count = 1;
             int gridSize = menu.randomGridSize;
 
             //Testing
-            menu.Show();
 
             // Making grid
             RowDefinition rowDefinition = new RowDefinition();
