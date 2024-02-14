@@ -19,9 +19,9 @@ namespace PenteGame
         public int randomGridSize;
         public MainWindow()
         {
+            InitializeComponent();
             MainMenu menu = new MainMenu();
             menu.Show();
-            InitializeComponent();
 
         }
 

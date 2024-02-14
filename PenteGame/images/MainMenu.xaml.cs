@@ -20,15 +20,17 @@ namespace PenteGame.images
     /// </summary>
     public partial class MainMenu : Window
     {
-        bool isPlayer = true;
-        int p1CapCount = 0; // Need to initialize values otherwise we get an exception
-        int p2CapCount = 0;
-        bool isCPU = false;
+        //bool isPlayer = true;
+        //int p1CapCount = 0; // Need to initialize values otherwise we get an exception
+        //int p2CapCount = 0;
+        //bool isCPU = false;
+        MainWindow mainWindow;
+        public Button button;
 
 
         public MainMenu()
         {
-            MainWindow mainWindow = new MainWindow();
+            mainWindow = new MainWindow();
             InitializeComponent();
             int count = 1;
             int gridSize = mainWindow.randomGridSize;
@@ -51,7 +53,7 @@ namespace PenteGame.images
             {
                 for (int row = 0; row < gridSize; row++)
                 {
-                    Button button = new Button(); // Buttons added
+                    button = new Button(); // Buttons added
                     button.Content = count.ToString(); // Testing that it prints properly
                     button.Name = "Piece" + count.ToString(); // Naming the piece based off the location
 
