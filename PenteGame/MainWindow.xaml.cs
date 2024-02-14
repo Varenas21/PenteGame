@@ -1,4 +1,5 @@
 ﻿using PenteGame.images;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -15,63 +16,40 @@ namespace PenteGame
 
     public partial class MainWindow : Window
     {
-      
-        bool isPlayer = true;
-        int p1CapCount = 0; // Need to initialize values otherwise we get an exception
-        int p2CapCount = 0;
-        bool isCPU = false;
-        
-
+        public int randomGridSize;
         public MainWindow()
         {
             MainMenu menu = new MainMenu();
             menu.Show();
             InitializeComponent();
-            Hide();
 
-            int count = 1;
-            int gridSize = menu.randomGridSize;
-
-            //Testing
-
-            // Making grid
-            RowDefinition rowDefinition = new RowDefinition();
-            ColumnDefinition columnDefinition = new ColumnDefinition();
-
-            rowDefinition.Height = new GridLength(gridSize);
-            columnDefinition.Width = new GridLength(gridSize);
-
-            GridBoard.RowDefinitions.Add(rowDefinition);
-            GridBoard.ColumnDefinitions.Add(columnDefinition);
-        
-            // Adding buttons dynamically
-            for (int column = 0; column < gridSize; column++)
-            {
-                for (int row = 0; row < gridSize; row++)
-                {
-                    Button button = new Button(); // Buttons added
-                    button.Content = count.ToString(); // Testing that it prints properly
-                    button.Name = "Piece" + count.ToString(); // Naming the piece based off the location
-
-                    //button.Style()
-                    // Adding buttons on rows and columns
-                    Grid.SetColumn(button, column);
-                    Grid.SetRow(button, row);
-                    GridBoard.Children.Add(button);
-
-
-                    count++;
-                }
-                
-
-            }
         }
 
-        // On Click for the buttons
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void Random_Click(object sender, RoutedEventArgs e)
         {
-            Button b = (Button)sender;
-            if(b.IsPressed == true) Console.WriteLine("Button clicked");
+            MainMenu menu = new MainMenu();
+            randomGridSize = int.Parse(UserInput.Text);
+            Console.WriteLine("Grid Size Value: " + randomGridSize);
+            menu.Show();
+
+        }
+
+        private void Quit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Classic_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenu menu = new MainMenu();
+            randomGridSize = 19;
+            menu.Show();
+        }
+
+        private void Instructions_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://www.pente.net/instructions.html");
         }
 
     }

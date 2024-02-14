@@ -6,64 +6,75 @@
         xmlns:local="clr-namespace:PenteGame.images"
         mc:Ignorable="d"
         Title="MainMenu" Height="450" Width="800">
-    <Grid Background="#FF232323">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="169*"/>
-            <ColumnDefinition Width="631*"/>
-        </Grid.ColumnDefinitions>
+    <StackPanel>
 
-        <Button x:Name="QuitButton" Content="Quit" HorizontalAlignment="Left" Margin="142,337,0,0" VerticalAlignment="Top" Height="49" Width="178" Click="Quit_Click" BorderBrush="Black" FontFamily="November" FontSize="25" Grid.Column="1">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFFFC172"/>
-                    <GradientStop Color="#FFFFAA30" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        <Grid Name="GridBoard"  Margin="0,0,0,-278" Height="450" Width="800">
+            <!--<Grid.Background>
+                <ImageBrush ImageSource="/images/PenteBoard.png">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform X="0"/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Grid.Background>-->
 
-        <Button x:Name="ClassicButton" Content="Classic" HorizontalAlignment="Left" Margin="133,254,0,0" VerticalAlignment="Top" Height="49" Width="178" Click="Classic_Click" BorderBrush="Black" FontFamily="November" FontSize="25" Grid.ColumnSpan="2">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFFFC172"/>
-                    <GradientStop Color="#FFFFAC36" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+            <Grid.RowDefinitions>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
 
-        <Button x:Name="CustomButton" Content="Custom Board (9-39)" HorizontalAlignment="Left" Margin="325,254,0,0" VerticalAlignment="Top" Height="49" Width="152" Click="Random_Click" BorderBrush="Black" FontFamily="November" FontSize="15" Grid.Column="1">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FEFFA82B" Offset="1"/>
-                    <GradientStop Color="#FFFFC172" Offset="0"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
 
-        <TextBlock x:Name="TitleMenu" HorizontalAlignment="Left" Margin="53,63,0,0" TextWrapping="Wrap" Text="PENTE GAME" VerticalAlignment="Top" Height="136" Width="362" FontFamily="November" FontSize="50" TextAlignment="Center" Grid.Column="1">
-            <TextBlock.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFFFBB62"/>
-                    <GradientStop Color="#FFFEA82E" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBlock.Foreground>
-        </TextBlock>
+            </Grid.ColumnDefinitions>
 
-        <Button x:Name="Instructions" Content="How to Play" HorizontalAlignment="Left" Margin="142,168,0,0" VerticalAlignment="Top" Height="49" Width="178" BorderBrush="Black" FontFamily="November" FontSize="25" Click="Instructions_Click" Grid.Column="1">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFFFC172"/>
-                    <GradientStop Color="#FFFFAC36" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <TextBox x:Name="UserInput" Grid.Column="1" HorizontalAlignment="Left" Margin="477,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="113" Height="25" BorderBrush="Black" Foreground="#FFFFBD66">
-            <TextBox.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFC5C5C5" Offset="0"/>
-                    <GradientStop Color="#FF232323" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBox.Background>
-        </TextBox>
-        <Label x:Name="CustomNumber" Grid.Column="1" Content="Odd Numbers" HorizontalAlignment="Left" Margin="482,254,0,0" VerticalAlignment="Top" Width="113" FontFamily="November" Background="Transparent" Foreground="White"/>
-    </Grid>
+            <Grid/>
+            <Button x:Name="Piece" Grid.Column="0" Grid.Row="0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+    </StackPanel>
 </Window>
