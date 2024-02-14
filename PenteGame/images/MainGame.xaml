@@ -1,0 +1,80 @@
+﻿<Window x:Class="PenteGame.images.MainGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PenteGame.images"
+        mc:Ignorable="d"
+        Title="MainMenu" Height="450" Width="800">
+    <StackPanel>
+
+        <Grid Name="GridBoard"  Margin="0,0,0,-278" Height="450" Width="800">
+            <!--<Grid.Background>
+                <ImageBrush ImageSource="/images/PenteBoard.png">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform X="0"/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Grid.Background>-->
+
+            <Grid.RowDefinitions>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+                <RowDefinition MinHeight="20"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+                <ColumnDefinition MinWidth="20" Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid/>
+            <Button x:Name="Piece" Grid.Column="0" Grid.Row="0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+    </StackPanel>
+</Window>
