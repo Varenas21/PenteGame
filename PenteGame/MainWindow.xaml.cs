@@ -16,14 +16,13 @@ namespace PenteGame
 
     public partial class MainWindow : Window
     {
-        public int randomGridSize;
         public MainWindow()
         {
             InitializeComponent();
-            MainMenu menu = new MainMenu();
-            menu.Show();
+  
 
         }
+        public int randomGridSize;
 
 
         private void Random_Click(object sender, RoutedEventArgs e)
